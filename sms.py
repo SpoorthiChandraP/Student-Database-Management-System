@@ -170,7 +170,6 @@ def connect_database():
         global mycursor,con
         try:
             con = pymysql.connect(host=hostEntry.get(),user=usernameEntry.get(),password=passwordEntry.get())
-            #con = pymysql.connect(host='localhost', user='root', password='root')
             mycursor = con.cursor()
         except:
             messagebox.showerror('Error','Invalid Details',parent=connectWindow)
